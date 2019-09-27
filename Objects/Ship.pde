@@ -1,4 +1,6 @@
+// Creates the class "Ship"
 class Ship {
+  //data for the class
   color c;
   float xPos;
   float yPos;
@@ -6,6 +8,7 @@ class Ship {
   boolean right;
   boolean up;
   boolean down;
+  //Constructor for the Ship that initalizes the data
   Ship() {
     c = color(255);
     xPos =450;
@@ -15,7 +18,7 @@ class Ship {
     up=false;
     down=false;
   }
-
+//Function (method) for ship display and area of movement
   void display() {
     stroke(c);
     if (left) {
@@ -52,6 +55,8 @@ class Ship {
       xPos=100;
     }
   }
+  
+  //function (method) for ship movement
   void move() {
     if (keyPressed) {
       if (key=='w') {
