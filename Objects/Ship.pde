@@ -18,7 +18,7 @@ class Ship {
     up=false;
     down=false;
   }
-//Function (method) for ship display and area of movement
+  //Function (method) for ship display and area of movement
   void display() {
     stroke(c);
     if (left) {
@@ -55,34 +55,28 @@ class Ship {
       xPos=100;
     }
   }
-  
+
   //function (method) for ship movement
   void move() {
-    if (keyPressed) {
-      if (key=='w') {
-        up=true;
-        down=false;
-        right=false;
-        left=false;
-      } 
-      if (key=='s') {
-        down=true;
-        up=false;
-        right=false;
-        left=false;
-      }
-      if (key=='a') {
-        left=true;
-        right=false;
-        up=false;
-        down=false;
-      }
-      if (key=='d') {
-        right=true;
-        left=false;
-        up=false;
-        down=false;
-      }
+    if (key=='w') {
+      up=true;
+    } else {
+      up=false;
+    } 
+    if (key=='s') {
+      down=true;
+    } else {
+      down=false;
+    }
+    if (key=='a') {
+      left=true;
+    } else {
+      left=false;
+    }
+    if (key=='d') {
+      right=true;
+    } else {
+      right=false;
     }
   }
   //void keyReleased() {
